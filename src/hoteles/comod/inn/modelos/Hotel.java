@@ -10,6 +10,7 @@ public class Hotel {
     private String localizacion;
     private String nombre;
     private String categoria;
+    private List<Cliente> clientes;
     private List<Reserva> reservas;
     private List<Huesped> habitaciones;
 
