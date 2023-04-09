@@ -1,5 +1,7 @@
 package hoteles.comod.inn.gui.components;
 
+import hoteles.comod.inn.gui.VistaHotel;
+import hoteles.comod.inn.gui.VistaPrincipal;
 import hoteles.comod.inn.modelos.Hotel;
 
 public class HotelCard extends javax.swing.JPanel {
@@ -20,7 +22,6 @@ public class HotelCard extends javax.swing.JPanel {
         paisTxt.setText(hotel.getPais());
         localizacionTxt.setText(hotel.getLocalizacion());
         estrellasTxt.setText(hotel.getCategoria());
-
     }
 
     /**
@@ -47,6 +48,11 @@ public class HotelCard extends javax.swing.JPanel {
         jPanel1.setMinimumSize(new java.awt.Dimension(161, 150));
 
         jButton2.setText("ACCEDER");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         estrellasTxt.setText("Estrellas");
 
@@ -112,6 +118,11 @@ public class HotelCard extends javax.swing.JPanel {
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        VistaPrincipal.getInstance().setPanel(new VistaHotel());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

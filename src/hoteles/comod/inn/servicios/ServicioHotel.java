@@ -8,10 +8,17 @@ import java.util.List;
 public class ServicioHotel {
     
     private List<Hotel> hoteles;
+    private static ServicioHotel instance;
 
     public ServicioHotel() {
-        
         hoteles = new ArrayList<>();
+    }
+    
+    public static ServicioHotel getInstance(){
+        if(instance == null){
+            instance = new ServicioHotel();
+        }
+        return instance;
     }
 
     public List<Hotel> getHoteles() {
