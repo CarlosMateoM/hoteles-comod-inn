@@ -1,6 +1,8 @@
 
 package hoteles.comod.inn;
 
+import hoteles.comod.inn.gui.VistaPrincipal;
+
 public class HotelesComodInn {
 
     /**
@@ -8,7 +10,8 @@ public class HotelesComodInn {
      */
     public static void main(String[] args) {
 
-        
+        VistaPrincipal vistaPrincipal = new VistaPrincipal();
+        vistaPrincipal.setVisible(true);
     }
     
 }
