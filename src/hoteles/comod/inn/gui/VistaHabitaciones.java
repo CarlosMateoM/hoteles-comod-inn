@@ -1,6 +1,10 @@
 
 package hoteles.comod.inn.gui;
 
+import hoteles.comod.inn.enums.TiposHabitaciones;
+import hoteles.comod.inn.gui.components.Dialog;
+import hoteles.comod.inn.gui.forms.HabitacionForm;
+import hoteles.comod.inn.gui.forms.HotelForm;
 import hoteles.comod.inn.modelos.Cliente;
 import hoteles.comod.inn.modelos.Habitacion;
 import hoteles.comod.inn.modelos.Hotel;
@@ -34,8 +38,8 @@ public class VistaHabitaciones extends javax.swing.JPanel {
         tablaHabitaciones.setRowCount(0);
         List<Habitacion> habitaciones = hotel.getServicioHabitacion().getHabitaciones();
         for(Habitacion habitacion: habitaciones ){
-            String estado = habitacion.isDisponibilidad() ? "OCUPADA" :"DISPONIBLE";
-            String rowData [] = {"" + habitacion.getNumeroHabitacion(), estado};
+            String estado = !habitacion.isDisponibilidad() ? "OCUPADA" :"DISPONIBLE";
+            String rowData [] = {"" + habitacion.getNumeroHabitacion(), estado, ""+habitacion.getPrecio(), habitacion.getTipoHabitacion().toString()};
             tablaHabitaciones.addRow(rowData);
         }
     }
@@ -59,11 +63,11 @@ public class VistaHabitaciones extends javax.swing.JPanel {
 
             },
             new String [] {
-                "N. Habitacion", "Disponibilidad"
+                "N. Habitacion", "Disponibilidad", "Precio", "Tipo"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -111,6 +115,9 @@ public class VistaHabitaciones extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Habitacion habitacion = new Habitacion();
+        HabitacionForm<TiposHabitaciones> habitacionForm = new HabitacionForm(habitacion, TiposHabitaciones.class);
+        Dialog dialog = new Dialog(null, true, habitacionForm);
+        dialog.setVisible(true);
         
         habitacion.setNumeroHabitacion(1);
         habitacion.setDisponibilidad(true);

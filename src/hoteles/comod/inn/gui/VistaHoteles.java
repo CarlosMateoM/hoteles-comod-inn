@@ -6,7 +6,7 @@ package hoteles.comod.inn.gui;
 
 import hoteles.comod.inn.gui.components.Dialog;
 import hoteles.comod.inn.gui.components.HotelCard;
-import hoteles.comod.inn.gui.components.HotelForm;
+import hoteles.comod.inn.gui.forms.HotelForm;
 import hoteles.comod.inn.modelos.Hotel;
 import hoteles.comod.inn.servicios.ServicioHotel;
 import java.util.List;

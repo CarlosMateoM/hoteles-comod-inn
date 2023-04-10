@@ -1,4 +1,4 @@
-package hoteles.comod.inn.gui.components;
+package hoteles.comod.inn.gui.forms;
 
 import hoteles.comod.inn.modelos.Cliente;
 import java.awt.Window;

@@ -3,7 +3,6 @@ package hoteles.comod.inn.modelos;
 
 import hoteles.comod.inn.servicios.ServicioCliente;
 import hoteles.comod.inn.servicios.ServicioHabitacion;
-import java.util.List;
 
 
 public class Hotel {
@@ -13,8 +12,8 @@ public class Hotel {
     private String nombre;
     private String categoria;
     private ServicioCliente servicioCliente;
-    private List<Reserva> reservas;
     private ServicioHabitacion servicioHabitacion;
+    
 
     public Hotel() {
         pais = "Colombia";
@@ -65,21 +64,8 @@ public class Hotel {
         return servicioHabitacion;
     }
     
-    
-    
-    
-    
-    
-    
-    
     public void agregarProductoCuentaFrigoBar(Reserva reserva, Producto producto, int cantidad){
         
     }
-    
-    /*
-    public abstract calcularTotalNetoAPagar(Reserva reserva){
-        
-    }
-    */
     
 }

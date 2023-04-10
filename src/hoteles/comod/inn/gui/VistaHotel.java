@@ -1,7 +1,7 @@
 
 package hoteles.comod.inn.gui;
 
-import hoteles.comod.inn.gui.components.ClienteForm;
+import hoteles.comod.inn.gui.forms.ClienteForm;
 import hoteles.comod.inn.gui.components.Dialog;
 import hoteles.comod.inn.modelos.Cliente;
 import hoteles.comod.inn.modelos.Hotel;

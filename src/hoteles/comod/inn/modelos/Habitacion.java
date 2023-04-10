@@ -1,25 +1,51 @@
 
 package hoteles.comod.inn.modelos;
 
-import java.util.List;
+import hoteles.comod.inn.enums.TiposHabitaciones;
 
-/**
- *
- * 
- */
+
+
 public class Habitacion {
     
+    private float precio;
+    private TiposHabitaciones tipoHabitacion;
+
+    public TiposHabitaciones getTipoHabitacion() {
+        return tipoHabitacion;
+    }
+
+    public void setTipoHabitacion(TiposHabitaciones tipoHabitacion) {
+        this.tipoHabitacion = tipoHabitacion;
+    }
+    private String descripcion;
     private int numeroHabitacion;
     private boolean disponibilidad;
     
-    private List<Huesped> huespedes;
-    private String tipoHabitacion;
+    //private List<Huesped> huespedes;
+    
     //private InventarioFrigoBar inventarioFrigoBar;
 
     public Habitacion() {
-            
+        numeroHabitacion = 0;
+        disponibilidad = true;
     }
 
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    
     public int getNumeroHabitacion() {
         return numeroHabitacion;
     }
@@ -34,22 +60,6 @@ public class Habitacion {
 
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
-    }
-
-    public List<Huesped> getHuespedes() {
-        return huespedes;
-    }
-
-    public void setHuespedes(List<Huesped> huespedes) {
-        this.huespedes = huespedes;
-    }
-
-    public String getTipoHabitacion() {
-        return tipoHabitacion;
-    }
-
-    public void setTipoHabitacion(String tipoHabitacion) {
-        this.tipoHabitacion = tipoHabitacion;
     }
 
     /*
