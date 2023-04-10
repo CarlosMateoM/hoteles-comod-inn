@@ -1,6 +1,8 @@
 
 package hoteles.comod.inn.modelos;
 
+import hoteles.comod.inn.servicios.ServicioCliente;
+import hoteles.comod.inn.servicios.ServicioHabitacion;
 import java.util.List;
 
 
@@ -10,11 +12,17 @@ public class Hotel {
     private String localizacion;
     private String nombre;
     private String categoria;
-    private List<Cliente> clientes;
+    private ServicioCliente servicioCliente;
     private List<Reserva> reservas;
-    private List<Huesped> habitaciones;
+    private ServicioHabitacion servicioHabitacion;
 
     public Hotel() {
+        pais = "Colombia";
+        nombre = "Hotel Caribe";
+        categoria = "3 Estrellas";
+        localizacion = "Cartagena, Bolívar";
+        servicioCliente = new ServicioCliente();
+        servicioHabitacion = new ServicioHabitacion();
     }
 
     public String getPais() {
@@ -48,6 +56,19 @@ public class Hotel {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
+
+    public ServicioCliente getServicioCliente() {
+        return servicioCliente;
+    }
+
+    public ServicioHabitacion getServicioHabitacion() {
+        return servicioHabitacion;
+    }
+    
+    
+    
+    
+    
     
     
     

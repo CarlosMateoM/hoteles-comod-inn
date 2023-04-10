@@ -11,18 +11,13 @@ public class Habitacion {
     
     private int numeroHabitacion;
     private boolean disponibilidad;
+    
     private List<Huesped> huespedes;
     private String tipoHabitacion;
     //private InventarioFrigoBar inventarioFrigoBar;
 
-    public Habitacion(int numeroHabitacion, boolean disponibilidad, List<Huesped> huespedes, String tipoHabitacion
-            //, InventarioFrigoBar inventarioFrigoBar
-    ) {
-        this.numeroHabitacion = numeroHabitacion;
-        this.disponibilidad = disponibilidad;
-        this.huespedes = huespedes;
-        this.tipoHabitacion = tipoHabitacion;
-    //    this.inventarioFrigoBar = inventarioFrigoBar;
+    public Habitacion() {
+            
     }
 
     public int getNumeroHabitacion() {

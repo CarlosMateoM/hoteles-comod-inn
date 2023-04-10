@@ -107,14 +107,7 @@ public class VistaHoteles extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        /*
-        JPanel jPanel = new JPanel();
-        JLabel jLabel = new JLabel("Titulo");
-
-        jPanel.add(jLabel);
-
-        this.setPanel(jPanel);*/
-
+  
         Hotel hotel = new Hotel();
 
         Dialog dialog = new Dialog(null, true, new HotelForm(hotel));

@@ -15,6 +15,7 @@ public class Dialog extends javax.swing.JDialog {
     public Dialog(java.awt.Frame parent, boolean modal, Component componet) {
         super(parent, modal);
         initComponents();
+        
         mainPanel.revalidate();
         mainPanel.add(componet);
         mainPanel.repaint();
@@ -33,6 +34,7 @@ public class Dialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        mainPanel.setMinimumSize(new java.awt.Dimension(270, 296));
         mainPanel.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

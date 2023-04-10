@@ -7,6 +7,8 @@ public class Cliente {
     private String telefono;
 
     public Cliente() {
+        nombre = "name";
+        telefono = "3022942391";
     }
     
     public Cliente(String nombre, String telefono) {

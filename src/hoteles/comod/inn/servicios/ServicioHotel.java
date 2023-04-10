@@ -12,6 +12,8 @@ public class ServicioHotel {
 
     public ServicioHotel() {
         hoteles = new ArrayList<>();
+        Hotel hotel = new Hotel();
+        registrar(hotel);
     }
     
     public static ServicioHotel getInstance(){
