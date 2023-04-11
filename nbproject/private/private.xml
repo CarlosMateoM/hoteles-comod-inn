@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Javier/Documents/NetBeansProjects/hoteles-comod-inn/src/hoteles/comod/inn/modelos/Hotel.java</file>
             <file>file:/C:/Users/Javier/Documents/NetBeansProjects/hoteles-comod-inn/src/hoteles/comod/inn/modelos/Cliente.java</file>
-            <file>file:/C:/Users/Javier/Documents/NetBeansProjects/hoteles-comod-inn/src/hoteles/comod/inn/HotelesComodInn.java</file>
-            <file>file:/C:/Users/Javier/Documents/NetBeansProjects/hoteles-comod-inn/src/hoteles/comod/inn/gui/VistaPrincipal.java</file>
+            <file>file:/C:/Users/Javier/Documents/NetBeansProjects/hoteles-comod-inn/src/hoteles/comod/inn/servicios/ServicioCliente.java</file>
         </group>
     </open-files>
 </project-private>
