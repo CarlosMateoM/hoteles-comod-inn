@@ -106,11 +106,11 @@ public class HabitacionForm<T extends Enum<T>> extends javax.swing.JPanel {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Window window = SwingUtilities.getWindowAncestor(HabitacionForm.this);
         float precio = Float.parseFloat(precioTxt.getText());
         habitacion.setPrecio(precio);
         String tipoHabitacion = categoriaComboBox.getSelectedItem().toString();
         habitacion.setTipoHabitacion(TiposHabitaciones.valueOf(tipoHabitacion));
+        Window window = SwingUtilities.getWindowAncestor(HabitacionForm.this);
         window.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
