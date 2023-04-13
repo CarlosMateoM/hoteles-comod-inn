@@ -2,6 +2,8 @@
 package hoteles.comod.inn.modelos;
 
 import hoteles.comod.inn.enums.TiposHabitaciones;
+import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -10,6 +12,13 @@ public class Habitacion {
     private float precio;
     private TiposHabitaciones tipoHabitacion;
 
+    private String descripcion;
+    private int numeroHabitacion;
+    private boolean disponible;
+    
+   private List<Huesped> huespedes;
+    
+    //private InventarioFrigoBar inventarioFrigoBar;
     public TiposHabitaciones getTipoHabitacion() {
         return tipoHabitacion;
     }
@@ -17,17 +26,11 @@ public class Habitacion {
     public void setTipoHabitacion(TiposHabitaciones tipoHabitacion) {
         this.tipoHabitacion = tipoHabitacion;
     }
-    private String descripcion;
-    private int numeroHabitacion;
-    private boolean disponibilidad;
-    
-    //private List<Huesped> huespedes;
-    
-    //private InventarioFrigoBar inventarioFrigoBar;
 
     public Habitacion() {
         numeroHabitacion = 0;
-        disponibilidad = true;
+        disponible = true;
+        huespedes = new ArrayList<Huesped>();
     }
 
     public float getPrecio() {
@@ -54,12 +57,22 @@ public class Habitacion {
         this.numeroHabitacion = numeroHabitacion;
     }
 
-    public boolean isDisponibilidad() {
-        return disponibilidad;
+    public boolean isDisponible() {
+        return disponible;
     }
 
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public List<Huesped> getHuespedes() {
+        return huespedes;
+    }
+    
+    
+    
+    public void agregarHuesped(Huesped huesped){
+        huespedes.add(huesped);
     }
 
     /*

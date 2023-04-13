@@ -64,7 +64,8 @@ public class Hotel {
         return servicioHabitacion;
     }
     
-    public void agregarProductoCuentaFrigoBar(Reserva reserva, Producto producto, int cantidad){
+    public void agregarProductoCuentaFrigoBar(Reserva reserva,
+            Producto producto, int cantidad){
         
     }
     

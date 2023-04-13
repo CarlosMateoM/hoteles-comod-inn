@@ -4,8 +4,7 @@ package hoteles.comod.inn.gui;
 import hoteles.comod.inn.enums.TiposHabitaciones;
 import hoteles.comod.inn.gui.components.Dialog;
 import hoteles.comod.inn.gui.forms.HabitacionForm;
-import hoteles.comod.inn.gui.forms.HotelForm;
-import hoteles.comod.inn.modelos.Cliente;
+import hoteles.comod.inn.gui.forms.ReservaForm;
 import hoteles.comod.inn.modelos.Habitacion;
 import hoteles.comod.inn.modelos.Hotel;
 import java.util.List;
@@ -38,7 +37,7 @@ public class VistaHabitaciones extends javax.swing.JPanel {
         tablaHabitaciones.setRowCount(0);
         List<Habitacion> habitaciones = hotel.getServicioHabitacion().getHabitaciones();
         for(Habitacion habitacion: habitaciones ){
-            String estado = !habitacion.isDisponibilidad() ? "OCUPADA" :"DISPONIBLE";
+            String estado = !habitacion.isDisponible() ? "OCUPADA" :"DISPONIBLE";
             String rowData [] = {"" + habitacion.getNumeroHabitacion(), estado, ""+habitacion.getPrecio(), habitacion.getTipoHabitacion().toString()};
             tablaHabitaciones.addRow(rowData);
         }
@@ -84,6 +83,11 @@ public class VistaHabitaciones extends javax.swing.JPanel {
         });
 
         jButton2.setText("Ocupar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -91,10 +95,10 @@ public class VistaHabitaciones extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 541, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -119,12 +123,17 @@ public class VistaHabitaciones extends javax.swing.JPanel {
         Dialog dialog = new Dialog(null, true, habitacionForm);
         dialog.setVisible(true);
         
-        habitacion.setNumeroHabitacion(1);
-        habitacion.setDisponibilidad(true);
-        
         hotel.getServicioHabitacion().registrar(habitacion);
         actualizarTabla();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        ReservaForm reservaForm = new ReservaForm(hotel);
+        Dialog dialog = new Dialog(null, true, reservaForm);
+        dialog.setVisible(true);
+        actualizarTabla();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
